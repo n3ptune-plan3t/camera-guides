@@ -5,7 +5,9 @@ Golden Ratio spiral, Symmetry, Diagonals, Leading Lines, S-Curve, Frame in Frame
 Repetition, Juxtaposition.
 
 Features: live preview, photo capture to `Pictures/CameraGuides`, front/back switch,
-flash (off/auto/on), tap to focus, guides on/off. Targets Android 15 (API 35), min API 29.
+flash (off/auto/on), tap to focus, guides on/off,
+MP tiers (defaults to the stock binned mode, e.g. 12MP; higher unbinned modes listed after it),
+aspect ratios 4:3 / 3:2 / 16:9 / 1:1 / 5:4 / Full (preview and saved photo are cropped identically). Targets Android 15 (API 35), min API 29.
 
 ## Build
 

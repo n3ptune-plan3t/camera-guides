@@ -11,8 +11,8 @@ android {
         applicationId = "com.n3ptune.cameraguides"
         minSdk = 29
         targetSdk = 35 // Android 15
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
     }
 
     buildTypes {

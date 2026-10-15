@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipChildren="true"
-        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintDimensionRatio="H,3:4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -35,25 +35,36 @@
             android:layout_gravity="top"
             android:gravity="end"
             android:orientation="horizontal"
-            android:padding="12dp">
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/btnMp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/pill"
-                android:paddingHorizontal="14dp"
+                android:paddingHorizontal="10dp"
                 android:paddingVertical="8dp"
                 android:text="12MP"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/btnRatio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/pill"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:text="4:3"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/btnFlash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="6dp"
                 android:background="@drawable/pill"
-                android:paddingHorizontal="14dp"
+                android:paddingHorizontal="10dp"
                 android:paddingVertical="8dp"
                 android:text="Flash: Off"
                 android:textColor="#FFFFFF" />
@@ -62,81 +73,82 @@
                 android:id="@+id/btnGuides"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="6dp"
                 android:background="@drawable/pill"
-                android:paddingHorizontal="14dp"
+                android:paddingHorizontal="10dp"
                 android:paddingVertical="8dp"
                 android:text="Guides: On"
                 android:textColor="#FFFFFF" />
-            </LinearLayout>
-        </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
 
-        <LinearLayout
-            android:id="@+id/panel"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewfinder">
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewfinder">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/chips"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:scrollbars="none">
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp" />
+        </HorizontalScrollView>
 
-                <LinearLayout
-                    android:id="@+id/chips"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="12dp" />
-                </HorizontalScrollView>
+        <TextView
+            android:id="@+id/techName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/techName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingTop="10dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/techDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingHorizontal="16dp"
+            android:textColor="#B0B0B0"
+            android:textSize="13sp" />
 
-                <TextView
-                    android:id="@+id/techDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="#B0B0B0"
-                    android:textSize="13sp" />
+        <FrameLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
+            <View
+                android:id="@+id/shutter"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shutter" />
 
-                    <View
-                        android:id="@+id/shutter"
-                        android:layout_width="76dp"
-                        android:layout_height="76dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/shutter" />
-
-                    <TextView
-                        android:id="@+id/btnFlip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|end"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/pill"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="10dp"
-                        android:text="Flip"
-                        android:textColor="#FFFFFF" />
-                    </FrameLayout>
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/btnFlip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/pill"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:text="Flip"
+                android:textColor="#FFFFFF" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
